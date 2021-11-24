@@ -1,3 +1,6 @@
 mat-form-field{
     margin-bottom: -18px;
 }
+.alert{
+    z-index: 1;
+}
