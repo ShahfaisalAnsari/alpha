@@ -1,0 +1,32 @@
+.bi-google{
+    font-size: 20px;
+    background-color: #db4a39;
+
+}
+.bi-twitter{
+    font-size: 20px;
+    background-color: #1DA1F2;
+}
+.bi-facebook{
+    font-size: 20px;
+    background-color: #4267B2;
+    
+}
+.bi{
+    /* color: #fff; */
+    padding: 10px;
+    /* border-radius: 50%; */
+    cursor: pointer;
+
+}
+mat-form-field{
+    /* background-color: #db4a39; */
+    margin-bottom: -18px;
+}
+.in-valid{
+    display: none;
+}
+.alert{
+    z-index: 1;
+    /* display: none; */
+}

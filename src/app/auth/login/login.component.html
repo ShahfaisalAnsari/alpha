@@ -1,0 +1,54 @@
+<!-- <div class="alert alert-success position-absolute w-100 " role="alert">
+    success
+  </div> -->
+<div *ngIf="show" class="alert alert-danger position-absolute w-100 " role="alert">
+    Please fill correct values
+  </div>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 d-flex align-items-center">
+            <div class="card  p-5  ">
+                <h1 class="text-center mb-5"> <b [ngStyle]="{'font-size':'40px','color':'#0275d8'}">Login</b></h1>
+                <form class="mb-5" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                    <mat-form-field appearance="fill" class="w-100">
+                        <mat-label>Enter Your Email</mat-label>
+                        <input matInput formControlName="uemail">
+                    </mat-form-field>
+                    <small class="alert-custom text-danger"
+                        *ngIf="myForm.controls.uemail.invalid && myForm.controls.uemail.touched && myForm.controls.uemail.dirty">Please
+                        enter a valid email</small>
+                    <mat-form-field appearance="fill" class="w-100 mt-4">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="upass">
+                        <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </a>
+                    </mat-form-field>
+                    <small class="alert-custom text-danger"
+                        *ngIf="myForm.controls.upass.invalid && myForm.controls.upass.touched && myForm.controls.upass.dirty">Please
+                        enter a valid password</small>
+                    <a class="text-decoration-none float-end">Forget password?</a>
+                    <button class="btn btn-primary w-100 mt-3 rounded-pill ">LogIn</button>
+                </form>
+                <div class="other-opt text-center mt-2 mb-5">
+                    <p class="text-secondary">Or Sign Up Using</p>
+                    <div class="social-icon mt-4 mb-5 text-light">
+    
+                        <a href="https://www.facebook.com/" class="text-light"><i
+                                class="bi bi-facebook me-2 rounded-circle "></i></a>
+                        <a href="https://twitter.com/" class="text-light"><i
+                                class="bi bi-twitter me-2 rounded-circle "></i></a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox" class="text-light"><i
+                                class="bi bi-google rounded-circle "></i></a>
+                    </div>
+                </div>
+                <div class="foot mt-5 text-center">
+                    <p class="text-secondary">Or Sign Up Using</p>
+                    <a routerLink="signup" class="text-dark text-decoration-none">SIGN UP</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

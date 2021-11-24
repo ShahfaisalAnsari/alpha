@@ -1,0 +1,15 @@
+h1{
+    background-color: lightskyblue;
+    color: #fff;
+    padding: 30px;
+    font-size: 50px;
+    line-height: 2;
+    
+}
+.main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+}
